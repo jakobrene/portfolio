@@ -160,10 +160,6 @@ a {
   margin: 26px 0 0;
   max-width: 640px;
 }
-.oneliner .hl {
-  background: linear-gradient(transparent 62%, var(--amber) 62%);
-  padding: 0 1px;
-}
 .lede {
   margin: 24px 0 0;
   max-width: 600px;

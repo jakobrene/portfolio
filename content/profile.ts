@@ -1,7 +1,7 @@
 export const profile = {
   eyebrow: "Strategy & Operations · Boston, MA",
   firstName: "Jakob",
-  lastName: "[Surname]",
+  lastName: "René",
 
   oneliner: {
     pre: "I turn messy go-to-market and operations into ",
