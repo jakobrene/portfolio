@@ -8,7 +8,7 @@ export const personal = {
     {
       k: "At sea",
       title: "Sailing",
-      body: "The big trip was that 7 of us (my dad, uncle, brother and 3 others) sailed our 47 foot boat from St Marteen to the Azores, which  ",
+      body: "The big trip was that 7 of us (my dad, uncle, brother and 3 others) sailed our 47 foot boat from St Marteen to the Azores, which was a dream experience and allowed me to get closer to my brother even though it was challenging at time in rough seas.",
     },
     {
       k: "Learning new skills",
