@@ -12,7 +12,7 @@ export const profile = {
   lede:
     "First commercial hire at a deep-tech 3D printing startup, where I built the connective tissue between product, sales, and operations: pricing, CRM, automation, and the go-to-market motion. I am looking for strategy, operations, or chief-of-staff work where the job is to make an organization run better.",
 
-  email: "hello@example.com",
+  email: "jakob@jakobrene.com",
   resumeUrl: "/resume.pdf",
   location: "Boston, MA",
   copyrightYear: 2026,
