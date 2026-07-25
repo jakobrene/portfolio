@@ -64,13 +64,6 @@ a {
   align-items: center;
   gap: 9px;
 }
-.eyebrow::before {
-  content: "";
-  width: 26px;
-  height: 1px;
-  background: var(--navy);
-  display: inline-block;
-}
 
 /* ---------- NAV ---------- */
 .topbar {

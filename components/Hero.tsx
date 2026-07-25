@@ -7,7 +7,6 @@ export default function Hero() {
       <div className="grid-bg" />
       <div className="wrap">
         <Reveal as="div" className="inner">
-          <span className="eyebrow">{profile.eyebrow}</span>
           <h1>
             {profile.firstName} <span className="last">{profile.lastName}</span>
           </h1>
