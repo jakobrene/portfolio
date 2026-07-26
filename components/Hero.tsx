@@ -3,18 +3,14 @@ import Reveal from "./Reveal";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="grid-bg" />
       <div className="wrap">
         <Reveal as="div" className="inner">
+          <span className="eyebrow">{profile.eyebrow}</span>
           <h1>
             {profile.firstName} <span className="last">{profile.lastName}</span>
           </h1>
-          <p className="oneliner">
-            {profile.oneliner.pre}
-            <span className="hl">{profile.oneliner.highlight}</span>
-            {profile.oneliner.post}
-          </p>
           <p className="lede">{profile.lede}</p>
           <div className="cta-row">
             <a className="btn btn-primary" href={profile.resumeUrl} download>

@@ -1,7 +1,10 @@
 import { profile } from "@/content/profile";
 import Nav from "@/components/Nav";
+import SideNav from "@/components/SideNav";
 import Hero from "@/components/Hero";
+import AboutSection from "@/components/AboutSection";
 import VideoBlock from "@/components/VideoBlock";
+import TimelineSection from "@/components/TimelineSection";
 import WorkSection from "@/components/WorkSection";
 import PersonalSection from "@/components/PersonalSection";
 import Footer from "@/components/Footer";
@@ -11,7 +14,10 @@ export default function Home() {
   return (
     <>
       <Nav />
+      <SideNav />
       <Hero />
+
+      <AboutSection />
 
       <section className="section" id="intro">
         <div className="wrap">
@@ -24,6 +30,8 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      <TimelineSection />
 
       <WorkSection />
       <PersonalSection />

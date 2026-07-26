@@ -27,3 +27,11 @@ export type PersonalItem = {
   title: string;
   body: string;
 };
+
+export type TimelineItem = {
+  date: string;
+  title: string;
+  org: string;
+  place: string;
+  type: "work" | "education";
+};
