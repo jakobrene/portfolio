@@ -15,8 +15,8 @@ export const profile = {
     { label: "Home", href: "#hero" },
     { label: "About", href: "#about" },
     { label: "Intro", href: "#intro" },
-    { label: "Timeline", href: "#timeline" },
     { label: "Work", href: "#work" },
+    { label: "Timeline", href: "#timeline" },
     { label: "Contact", href: "#contact" },
   ],
 

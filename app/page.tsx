@@ -30,9 +30,8 @@ export default function Home() {
         </div>
       </section>
 
-      <TimelineSection />
-
       <WorkSection />
+      <TimelineSection />
       <Footer />
     </>
   );
