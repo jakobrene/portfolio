@@ -8,6 +8,7 @@ export const profile = {
 
   email: "jakob@jakobrene.com",
   resumeUrl: "/resume.pdf",
+  resumeFileName: "Jakob Rene Resume.pdf",
   location: "Colorado Springs, CO",
   copyrightYear: 2026,
 

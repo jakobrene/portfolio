@@ -11,7 +11,7 @@ export default function Footer() {
             <br />
             <a href={`mailto:${profile.email}`}>{profile.email}</a>
           </h2>
-          <a className="btn btn-primary" href={profile.resumeUrl} download>
+          <a className="btn btn-primary" href={profile.resumeUrl} download={profile.resumeFileName}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
               <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16" />
             </svg>
