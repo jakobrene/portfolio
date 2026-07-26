@@ -22,12 +22,6 @@ export type WorkEntry = {
   flip?: boolean;
 };
 
-export type PersonalItem = {
-  k: string;
-  title: string;
-  body: string;
-};
-
 export type TimelineItem = {
   date: string;
   title: string;

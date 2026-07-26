@@ -6,7 +6,6 @@ import AboutSection from "@/components/AboutSection";
 import VideoBlock from "@/components/VideoBlock";
 import TimelineSection from "@/components/TimelineSection";
 import WorkSection from "@/components/WorkSection";
-import PersonalSection from "@/components/PersonalSection";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 
@@ -34,7 +33,6 @@ export default function Home() {
       <TimelineSection />
 
       <WorkSection />
-      <PersonalSection />
       <Footer />
     </>
   );

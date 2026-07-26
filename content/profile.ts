@@ -17,7 +17,6 @@ export const profile = {
     { label: "Intro", href: "#intro" },
     { label: "Timeline", href: "#timeline" },
     { label: "Work", href: "#work" },
-    { label: "Beyond work", href: "#play" },
     { label: "Contact", href: "#contact" },
   ],
 
