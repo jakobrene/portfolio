@@ -117,18 +117,6 @@ a {
   padding: 84px 0 64px;
   position: relative;
 }
-.hero .grid-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background-image: linear-gradient(var(--hairline) 1px, transparent 1px),
-    linear-gradient(90deg, var(--hairline) 1px, transparent 1px);
-  background-size: 46px 46px;
-  -webkit-mask-image: radial-gradient(circle at 78% 18%, #000 0%, transparent 58%);
-  mask-image: radial-gradient(circle at 78% 18%, #000 0%, transparent 58%);
-  opacity: 0.5;
-}
 .hero .inner {
   position: relative;
   z-index: 1;
@@ -419,64 +407,39 @@ a {
 .work-item:first-of-type {
   border-top: 1px solid var(--ink);
 }
-.work-item.flip .work-copy {
-  order: 2;
+.work-item.solo {
+  grid-template-columns: 1fr;
 }
-.work-tag {
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--navy);
+.work-item.solo .work-copy {
+  max-width: 760px;
 }
 .work-copy h3 {
   font-family: var(--display);
   font-weight: 600;
   font-size: clamp(22px, 2.6vw, 28px);
   letter-spacing: -0.01em;
-  margin: 10px 0 12px;
+  margin: 0 0 14px;
   line-height: 1.1;
 }
 .work-copy p {
   color: #3a3e42;
   font-size: 17px;
+  margin: 0 0 12px;
 }
-.outcome {
-  margin-top: 18px;
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
+.work-copy p:last-child {
+  margin-bottom: 0;
 }
-.outcome .num {
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: 34px;
-  color: var(--ink);
-  line-height: 1;
-  position: relative;
+.work-copy ul {
+  margin: 0 0 12px;
+  padding-left: 24px;
 }
-.outcome .num::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -3px;
-  height: 6px;
-  background: var(--amber);
-  z-index: -1;
+.work-copy ul:last-child {
+  margin-bottom: 0;
 }
-.outcome .num span {
-  position: relative;
-  z-index: 1;
-}
-.outcome .desc {
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--muted);
-  max-width: 200px;
-  line-height: 1.5;
+.work-copy li {
+  color: #3a3e42;
+  font-size: 16px;
+  margin-bottom: 7px;
 }
 
 /* ---------- SCHEMATIC DIAGRAMS ---------- */
@@ -608,9 +571,6 @@ a {
   .work-item {
     grid-template-columns: 1fr;
     gap: 26px;
-  }
-  .work-item.flip .work-copy {
-    order: 0;
   }
   .work-item .schema {
     order: 2;

@@ -4,23 +4,30 @@ import Reveal from "./Reveal";
 
 export default function WorkItem({ entry }: { entry: WorkEntry }) {
   return (
-    <Reveal as="article" className={`work-item${entry.flip ? " flip" : ""}`}>
+    <Reveal as="article" className={`work-item${entry.schema ? "" : " solo"}`}>
       <div className="work-copy">
-        <span className="work-tag">{entry.tag}</span>
         <h3>{entry.title}</h3>
-        <p>{entry.body}</p>
-        <div className="outcome">
-          <span className="num">
-            <span>{entry.outcome.num}</span>
-          </span>
-          <span className="desc">{entry.outcome.desc}</span>
+        {entry.blocks.map((block, i) =>
+          block.kind === "bullets" ? (
+            <ul key={i}>
+              {block.items.map((item, j) => (
+                <li key={j}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p key={i}>{block.text}</p>
+          )
+        )}
+      </div>
+      {entry.schema && (
+        <div className="schema">
+          <span className="schema-cap">{entry.schema.caption}</span>
+          {entry.schema.flow && <Flow items={entry.schema.flow} />}
+          {entry.schema.loopNote && (
+            <div className="loop-note">{entry.schema.loopNote}</div>
+          )}
         </div>
-      </div>
-      <div className="schema">
-        <span className="schema-cap">{entry.schemaCaption}</span>
-        <Flow items={entry.flow} />
-        {entry.loopNote && <div className="loop-note">{entry.loopNote}</div>}
-      </div>
+      )}
     </Reveal>
   );
 }

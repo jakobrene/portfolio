@@ -4,7 +4,6 @@ import Reveal from "./Reveal";
 export default function Hero() {
   return (
     <section className="hero" id="hero">
-      <div className="grid-bg" />
       <div className="wrap">
         <Reveal as="div" className="inner">
           <span className="eyebrow">{profile.eyebrow}</span>

@@ -1,5 +1,5 @@
 export const profile = {
-  eyebrow: "Hi and welcome to my website, here you can learn more about me and what I like to do.",
+  eyebrow: "Hi and welcome to my website, here you can learn more about me",
   firstName: "Jakob",
   lastName: "René",
 
@@ -57,6 +57,6 @@ export const profile = {
 
   work: {
     heading: "Selected work",
-    idx: "Four things I built or moved",
+    idx: "Three things I built",
   },
 } as const;

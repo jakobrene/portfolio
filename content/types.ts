@@ -11,15 +11,18 @@ export type FlowItem =
   | { kind: "connectorV" }
   | { kind: "column"; items: FlowItem[] };
 
+export type WorkBlock =
+  | { kind: "p"; text: string }
+  | { kind: "bullets"; items: string[] };
+
 export type WorkEntry = {
-  tag: string;
   title: string;
-  body: string;
-  outcome: { num: string; desc: string };
-  schemaCaption: string;
-  flow: FlowItem[];
-  loopNote?: string;
-  flip?: boolean;
+  blocks: WorkBlock[];
+  schema?: {
+    caption: string;
+    flow?: FlowItem[];
+    loopNote?: string;
+  };
 };
 
 export type TimelineItem = {

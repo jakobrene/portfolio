@@ -2,78 +2,100 @@ import type { WorkEntry } from "./types";
 
 export const work: WorkEntry[] = [
   {
-    tag: "RevOps · Systems",
-    title: "Rebuilt the CRM from the ground up",
-    body: "Migrated the company off Salesforce onto HubSpot and designed the automation layer in Make.com that keeps records, deals, and handoffs in sync without anyone touching a spreadsheet.",
-    outcome: { num: "~12h", desc: "of manual data work removed per week" },
-    schemaCaption: "sync layer",
-    flow: [
-      { kind: "node", node: { label: "SALESFORCE", sub: "legacy" } },
-      { kind: "connector" },
-      { kind: "node", node: { label: "MAKE.COM", sub: "routing + dedupe", style: "hub" } },
-      { kind: "connector" },
-      { kind: "node", node: { label: "HUBSPOT", sub: "source of truth", style: "amber" } },
-    ],
-    loopNote: "bidirectional sync · 9 scenarios · runs hourly",
-  },
-  {
-    tag: "Commercial · Pricing",
-    title: "Set the pricing and the go-to-market motion",
-    body: "As the first business hire, I built how we price two product lines and how we sell them, from first-touch through close, turning ad-hoc quotes into a repeatable commercial process.",
-    outcome: { num: "2", desc: "product lines repriced and packaged from scratch" },
-    schemaCaption: "gtm motion",
-    flip: true,
-    flow: [
-      { kind: "node", node: { label: "LEAD" } },
-      { kind: "connector" },
-      { kind: "node", node: { label: "QUALIFY" } },
-      { kind: "connector" },
-      { kind: "node", node: { label: "PRICE", sub: "model" } },
-      { kind: "connector" },
-      { kind: "node", node: { label: "CLOSE", style: "amber" } },
-    ],
-    loopNote: "documented playbook · handed off to repeat",
-  },
-  {
-    tag: "Strategy · Targeting",
-    title: "Turned an exhibitor list into an account plan",
-    body: "Ahead of a major industry show, I analyzed the full exhibitor list, mapped it against where we actually win, and built a prioritized targeting plan the team could walk in and execute.",
-    outcome: { num: "300+", desc: "exhibitors scored down to a focused target list" },
-    schemaCaption: "prioritization",
-    flow: [
+    title: "Setting up infrastructure",
+    blocks: [
       {
-        kind: "column",
-        items: [
-          { kind: "node", node: { label: "300+ EXHIBITORS", sub: "raw list", dashedBorder: true } },
-          { kind: "connectorV" },
-          { kind: "node", node: { label: "FIT × INTENT FILTER", sub: "revenue-vertical match", style: "hub" } },
-          { kind: "connectorV" },
-          { kind: "node", node: { label: "TARGET ACCOUNTS", sub: "walk-in ready", style: "amber" } },
-        ],
+        kind: "p",
+        text: "When I got hired, we didn't have a CRM system and we quickly opted for Salesforce. I took responsibility for setting up the system so we could use it.",
+      },
+      {
+        kind: "p",
+        text: "A few years later, Salesforce was too complex and too expensive for what we wanted to do, so I evaluated multiple CRMs before settling on HubSpot which I also took responsibility to set up.",
+      },
+      {
+        kind: "p",
+        text: "In addition to the two CRM systems, I have also onboarded Clay, Apollo and ZoomInfo for our lead generation efforts.",
       },
     ],
   },
   {
-    tag: "Ops · Automation",
-    title: "Closed the loop on customer feedback",
-    body: "Wired shipping events to a survey flow so every delivery automatically triggers an NPS request, logs the score in the CRM, and flags detractors for follow-up. No one has to remember to ask.",
-    outcome: { num: "0", desc: "manual steps between delivery and feedback" },
-    schemaCaption: "closed loop",
-    flip: true,
-    flow: [
-      { kind: "node", node: { label: "SHIPPO", sub: "delivered" } },
-      { kind: "connector", dashed: true },
-      { kind: "node", node: { label: "MAKE", sub: "webhook", style: "hub" } },
-      { kind: "connector" },
+    title: "Automations and connecting systems using Make.com and APIs",
+    blocks: [
       {
-        kind: "column",
+        kind: "p",
+        text: "I streamlined the operations from order intake to shipment and NPS survey being sent by connecting 6 different systems using APIs and the automation platform Make.com.",
+      },
+      {
+        kind: "p",
+        text: "Inkbit is a manufacturing company which takes custom orders on the web, manufactures them and then ships them. Optimizing every step is important to keep overhead down.",
+      },
+      {
+        kind: "p",
+        text: "The system consists of 6 different parts: an order intake system, CRM (HubSpot), MES, a document generation platform, accounting system (QuickBooks) and a shipment provider.",
+      },
+      {
+        kind: "p",
+        text: "By using Make.com and APIs, I automated",
+      },
+      {
+        kind: "bullets",
         items: [
-          { kind: "node", node: { label: "NPS EMAIL" } },
-          { kind: "connectorV" },
-          { kind: "node", node: { label: "HUBSPOT", sub: "score + flag", style: "amber" } },
+          "Orders being put into HubSpot from our order intake system on the webpage for sales to review.",
+          "Moving the order from HubSpot to our manufacturing system for operations to execute once sales has reviewed the order.",
+          "Sending an order confirmation email once the order has been moved to the manufacturing system.",
+          "Creating the pack list and the shipping label once the order is ready to be shipped.",
+          "Generating the invoice in QuickBooks once the order shipped so our controller easily can send the invoice.",
+          "Sending a tracking email once the carrier has picked up the package.",
+          "Sending a survey once the package has been delivered.",
+          "Notifying the salesperson that the package has been delivered.",
         ],
       },
     ],
-    loopNote: "detractors auto-routed for follow-up",
+    schema: {
+      caption: "order to delivery",
+      flow: [
+        {
+          kind: "column",
+          items: [
+            { kind: "node", node: { label: "ORDER INTAKE", sub: "webpage" } },
+            { kind: "connectorV" },
+            { kind: "node", node: { label: "HUBSPOT", sub: "sales review" } },
+            { kind: "connectorV" },
+            { kind: "node", node: { label: "MES", sub: "manufacturing" } },
+            { kind: "connectorV" },
+            { kind: "node", node: { label: "DOCS", sub: "pack list + label" } },
+            { kind: "connectorV" },
+            { kind: "node", node: { label: "QUICKBOOKS", sub: "invoice" } },
+            { kind: "connectorV" },
+            { kind: "node", node: { label: "SHIPMENT", sub: "tracking + survey" } },
+          ],
+        },
+      ],
+      loopNote: "6 systems connected via Make.com + APIs",
+    },
+  },
+  {
+    title: "AI Agents and Routines",
+    blocks: [
+      {
+        kind: "p",
+        text: "To streamline processes and enable sales to get information quickly, I built an agent that in the morning",
+      },
+      {
+        kind: "bullets",
+        items: [
+          "Highlights any emails that need responses.",
+          "Finds a set number of leads already in the CRM system given certain criteria and highlights a connection angle for the salesperson.",
+        ],
+      },
+      {
+        kind: "p",
+        text: "I have also automated all the recurring document generation tasks, like daily, weekly or monthly reports for freeing up valuable time.",
+      },
+      {
+        kind: "p",
+        text: "In my free time, I have created an agent that looks through the LinkedIn notification emails sent to my Gmail and summarizes them in an Excel list given certain criteria. I can also communicate back with the agent by leaving notes in the Excel list for it to learn over time.",
+      },
+    ],
   },
 ];
