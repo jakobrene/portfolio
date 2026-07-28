@@ -52,7 +52,7 @@ export const profile = {
     idx: "00 / Hello",
     corner: "REC · 01:24",
     // Set this to a Vimeo/Mux/YouTube embed URL to make the video block playable.
-    embedUrl: "",
+    embedUrl: "https://www.youtube.com/embed/qWz8JhsbLbU",
   },
 
   work: {
