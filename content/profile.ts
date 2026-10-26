@@ -39,7 +39,7 @@ export const profile = {
       {
         heading: "Selected personal experience",
         paragraphs: [
-          "Grew up in Sweden and moved to Boston for work in 2020. Got engaged in 2025 with wedding scheduled for September of 2026. About to move to Colorado Springs due to my fiancée's job.",
+          "Grew up in Sweden and moved to Boston for work in 2020. Got engaged in 2025 and married in September 2026. Moved to Colorado Springs in 2026 due to my wife's job.",
           "In my free time I like being outdoors; sailing, hiking, skiing and fishing. I also like cooking, reading and learning new skills, among them using AI to build this website.",
           "A recent highlight was sailing from Saint Martin to the Azores on my family's 47 foot boat with my dad, my uncle, my brother and three other friends. It was a surreal experience being 17 days at sea on a small boat.",
         ],

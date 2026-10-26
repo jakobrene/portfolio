@@ -94,7 +94,7 @@ export const work: WorkEntry[] = [
       },
       {
         kind: "p",
-        text: "In my free time, I have created an agent that looks through the LinkedIn notification emails sent to my Gmail and summarizes them in an Excel list given certain criteria. I can also communicate back with the agent by leaving notes in the Excel list for it to learn over time.",
+        text: "In my free time, I have created an agent that looks through the LinkedIn notification emails sent to my Gmail, evaluates them given certain criteria and saves them to a Supabase database that I review in my own web app. I can also communicate back with the agent by leaving feedback on each job for it to learn over time. So far it has evaluated 900 jobs.",
       },
     ],
   },

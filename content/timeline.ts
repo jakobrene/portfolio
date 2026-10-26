@@ -54,15 +54,15 @@ export const timeline = {
       type: "work",
     },
     {
-      date: "May 2024 – Present",
-      title: "Director of Sales for 3D-Printed Services",
+      date: "May 2024 – Jun 2025",
+      title: "Sales Lead",
       org: "Inkbit",
       place: "Boston, MA",
       type: "work",
     },
     {
       date: "Jun 2025 – Present",
-      title: "Director of Sales and Operations",
+      title: "Sales and Operations Lead",
       org: "Inkbit",
       place: "Boston, MA",
       type: "work",
